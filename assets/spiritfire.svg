@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="spirit" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffd28c" />
+      <stop offset="1" stop-color="#ff5f6d" />
+    </linearGradient>
+  </defs>
+  <path fill="url(#spirit)" d="M32 6c-4 6-10 14-10 22 0 10 6 16 10 18 4-2 10-8 10-18 0-8-6-16-10-22z" />
+  <circle cx="32" cy="44" r="10" fill="#ffe9b5" opacity="0.6" />
+</svg>
