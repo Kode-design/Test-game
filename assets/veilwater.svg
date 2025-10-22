@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="veil" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#b8f4ff" />
+      <stop offset="1" stop-color="#4cc4ff" />
+    </linearGradient>
+  </defs>
+  <path fill="#123447" d="M22 10h20l6 34-16 12-16-12z" />
+  <path fill="url(#veil)" d="M24 12h16l5 30-13 10-13-10z" />
+  <ellipse cx="32" cy="26" rx="6" ry="10" fill="#e6fbff" opacity="0.6" />
+</svg>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Forest Forager: Rites of the Grove</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <header class="masthead">
+        <div class="titles">
+          <h1>Forest Forager</h1>
+          <p class="subtitle">Complete the twelve rites and restore balance to the grove.</p>
+        </div>
+        <div class="season-indicator" aria-live="polite">
+          <span class="label">Current Rite</span>
+          <span id="current-rite">—</span>
+        </div>
+      </header>
+      <section class="playfield">
+        <canvas
+          id="game"
+          width="960"
+          height="640"
+          role="img"
+          aria-label="Top-down adventure in a sprawling forest"
+        ></canvas>
+        <div class="overlay">
+          <div class="timer" aria-live="polite">
+            <strong>Day <span id="day-count">1</span></strong>
+            <span id="clock">00:00</span>
+          </div>
+          <div id="meditation-status" class="meditation" hidden>
+            <p>Holding steady at the shrine… <span id="meditation-progress">0%</span></p>
+            <div class="meter">
+              <div id="meditation-bar"></div>
+            </div>
+          </div>
+          <div class="status-log" aria-live="polite">
+            <p id="status">Explore the forest to begin the first rite.</p>
+          </div>
+        </div>
+      </section>
+      <aside class="hud">
+        <section class="quest-log" aria-live="polite">
+          <h2>Quest Log</h2>
+          <ol id="quest-steps"></ol>
+        </section>
+        <section class="inventory">
+          <h2>Pouches</h2>
+          <ul id="inventory-list"></ul>
+        </section>
+        <section class="controls">
+          <h2>Controls</h2>
+          <ul>
+            <li>Move with WASD or the arrow keys</li>
+            <li>Hold <kbd>Space</kbd> within a shrine to meditate</li>
+            <li>Press <kbd>M</kbd> to toggle the world map</li>
+            <li>Press <kbd>R</kbd> to restart the adventure</li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+    <div id="map-modal" class="map-modal" role="dialog" aria-modal="true" hidden>
+      <div class="map-content">
+        <header>
+          <h2>The Grove of Twelve Seasons</h2>
+          <button id="close-map" type="button" aria-label="Close map">×</button>
+        </header>
+        <canvas id="world-map" width="512" height="512" aria-hidden="true"></canvas>
+        <p class="map-caption">Shrines glow when their rite is active. Collect offerings and return to the glowing shrine to continue.</p>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
